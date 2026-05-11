@@ -807,7 +807,25 @@ html {
 
 /* RESPONSIVO */
 
-@media (max-width: 768px){
+@media (max-width: 1305px) {
+
+  .text-home {
+    font-size: 1.4em;
+    color: var(--gold);
+    width: 35vw;
+    margin-left: 5vw;
+  }
+
+  .home-img{
+    width: 600px;
+    position: absolute;
+    right: 5vw;
+    top: 3vh;
+    z-index: 0;
+  }
+}
+
+@media (max-width: 1000px){
 
   body{
     overflow-x: hidden;
@@ -886,7 +904,7 @@ html {
 
   .home-img{
     position: absolute;
-    width: 100%;
+    width: 460px;
     right: auto;
     top: auto;
     bottom: 0;
