@@ -28,7 +28,39 @@
         </nav>
     </header>
 
-     
+    <aside class="chat-wrapper">
+
+        <div class="btn-chat">
+            <i class="bi bi-chat-dots-fill"></i>
+        </div>
+
+        <div class="interface-chat">
+            <div class="info-window">
+                <div class="chat-title">
+                    <h4>Tire sua dúvida</h4>
+                    <p>Atendimento rápido via WhatsApp</p>
+                </div>
+                <div class="close">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+            </div>
+
+            <form class="chat-form">
+                <!--<label>Número
+                    <input type="text" placeholder="Digite seu telefone">
+                </label>-->
+
+                <label>Sua dúvida
+                    <textarea class="text-whatsapp"
+                    placeholder="Digite sua dúvida aqui..."></textarea>
+                </label>
+
+                <button type="submit" class="send-chat" id="btnTextWhatsapp">
+                Enviar para WhatsApp
+                </button>
+            </form>
+        </div>
+    </aside>
 
     <section class="home" id="home">
         <div class="text-home">
@@ -81,9 +113,18 @@
         <h1 class="title">Conheça seus direitos</h1>
         <div class="gold-line"></div>
 
-        <div class="posts-caroussel hidden" id="instagramPosts">
+        <div class="carousel-container">
 
-            
+            <button class="carousel-btn prev">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+
+            <div class="posts-caroussel hidden" id="instagramPosts"></div>
+
+            <button class="carousel-btn next">
+                <i class="bi bi-chevron-right"></i>
+            </button>
+
         </div>
     </section>
 
