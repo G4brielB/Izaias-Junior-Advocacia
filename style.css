@@ -594,7 +594,6 @@ html {
 
 .form-contact {
   width: 100%;
-  max-width: 520px;
   display: flex;
   flex-direction: column;
   gap: 0.8em;
@@ -606,7 +605,7 @@ html {
   font-weight: 600;
   letter-spacing: 0.5px;
   line-height: 1.6;
-  width: 40vw;
+  width: 100%;
 }
 
 
@@ -807,7 +806,7 @@ html {
 
 /* RESPONSIVO */
 
-@media (max-width: 1305px) {
+@media (max-width: 1320px) {
 
   .text-home {
     font-size: 1.4em;
@@ -823,6 +822,11 @@ html {
     top: 3vh;
     z-index: 0;
   }
+
+  .area-of-activity{
+    padding-top: 30px;
+  }
+
 }
 
 @media (max-width: 1000px){
@@ -890,13 +894,13 @@ html {
   }
 
   .home h1 {
-    font-size: 1.5em;
+    font-size: 2em;
   }
 
   .text-home{
     width: 100%;
     margin-left: 0;
-    font-size: 1em;
+    font-size: 1.7em;
     z-index: 2;
   }
 
@@ -904,7 +908,7 @@ html {
 
   .home-img{
     position: absolute;
-    width: 460px;
+    width: 50vh;
     right: auto;
     top: auto;
     bottom: 0;
@@ -912,7 +916,7 @@ html {
   }
 
   .title, .contact-title{
-    font-size: 2.2em;
+    font-size: 3.2em;
     text-align: center;
   }
 
@@ -926,7 +930,7 @@ html {
 
   .cards{
     margin: 80px 20px;
-    transform: scale(80%);
+  
   }
 
   .card{
@@ -939,11 +943,11 @@ html {
 
   .about-description{
     width: 100%;
-    font-size: 1.1em;
+    font-size: 2em;
   }
 
   .carousel-container{
-  height: 760px;
+    height: 65vh;
   }
 
   .post-card.left,
@@ -952,7 +956,8 @@ html {
   }
 
   .post-card.active{
-    transform: translate(-50%, -50%) scale(0.9);
+    transform: translate(-50%, -50%) scale(1.5);
+
   }
 
   .carousel-btn{
@@ -975,7 +980,9 @@ html {
 
   .contact-area{
     flex-direction: column;
+    align-items: stretch;
     gap: 50px;
+    width: 90%;
   }
 
   .form-contact{
@@ -984,11 +991,13 @@ html {
 
   .form-contact label {
     width: 100%;
+    font-size: 2.0em;
+    
   }
 
   .whatsapp-submit{
     width: 100%;
-    font-size: 1em;
+    font-size: 2.0em;
   }
 
   .local-maps iframe{
@@ -1025,7 +1034,6 @@ html {
 
   .social{
     flex-wrap: wrap;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 10px;
