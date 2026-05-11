@@ -58,6 +58,7 @@ html {
   background-color: var(--blue-navi);
   box-shadow: 5px 0px 5px 1px  #000;
   border-bottom: solid 2px var(--gold);
+  z-index: 999;
 }
 
 .logo-area {
@@ -88,6 +89,14 @@ html {
 .title-name p {
   font-size: 1.2em;
   color: var(--gold);
+}
+
+.menu-mobile{
+  display: none;
+}
+
+.header-nav{
+  display: flex;
 }
 
 .nav-list{
@@ -363,6 +372,8 @@ html {
   z-index: 0;
 }
 
+
+
 /* AREAS DE ATUAÇÃO */
 
 .area-of-activity{
@@ -558,7 +569,7 @@ html {
 /* AREA DE CONTATO*/
 
 .contact{
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--blue-navi);
   display: flex;
   flex-direction: column;
@@ -573,7 +584,7 @@ html {
 }
 
 .contact-area{
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -595,11 +606,12 @@ html {
   font-weight: 600;
   letter-spacing: 0.5px;
   line-height: 1.6;
+  width: 40vw;
 }
 
 
 .form-contact input {
-  width: 40vw;
+  width: 100%;
   margin-top: 10px;
   background: rgba(248, 248, 245, 0.08);
   border: 1px solid rgba(212, 175, 55, 0.25);
@@ -791,5 +803,263 @@ html {
 
 .footer a {
   color: white;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px){
+
+  body{
+    overflow-x: hidden;
+  }
+
+  .nav-list li{
+    margin: 0;
+  }
+
+  .menu-mobile{
+  display: flex;
+  color: var(--bege);
+  font-size: 2.5em;
+  cursor: pointer;
+  }
+
+  .header{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+  }
+
+
+  .header-nav{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--blue-dark);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+  }
+
+  .header-nav.active{
+    max-height: 500px;
+    padding: 20px 0;
+  }
+
+  .nav-list{
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+  }
+
+  .nav-list li{
+    margin: 15px 0;
+  }
+
+  .home{
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    padding: 60px 20px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    position: relative;
+  }
+
+  .home h1 {
+    font-size: 1.5em;
+  }
+
+  .text-home{
+    width: 100%;
+    margin-left: 0;
+    font-size: 1em;
+    z-index: 2;
+  }
+
+
+
+  .home-img{
+    position: absolute;
+    width: 100%;
+    right: auto;
+    top: auto;
+    bottom: 0;
+    
+  }
+
+  .title, .contact-title{
+    font-size: 2.2em;
+    text-align: center;
+  }
+
+  .gold-line{
+    width: 120px;
+  }
+
+  .area-of-activity{
+    padding-top: 30px;
+  }
+
+  .cards{
+    margin: 80px 20px;
+    transform: scale(80%);
+  }
+
+  .card{
+    width: 100%;
+  }
+
+  .about{
+  padding: 80px 20px;
+  }
+
+  .about-description{
+    width: 100%;
+    font-size: 1.1em;
+  }
+
+  .carousel-container{
+  height: 760px;
+  }
+
+  .post-card.left,
+  .post-card.right{
+    display: none;
+  }
+
+  .post-card.active{
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+
+  .carousel-btn{
+    width: 55px;
+    height: 55px;
+    font-size: 1.5em;
+  }
+
+  .prev{
+    left: 5px;
+  }
+
+  .next{
+    right: 5px;
+  }
+
+  .contact{
+    padding: 80px 20px;
+  }
+
+  .contact-area{
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .form-contact{
+    width: 100%;
+  }
+
+  .form-contact label {
+    width: 100%;
+  }
+
+  .whatsapp-submit{
+    width: 100%;
+    font-size: 1em;
+  }
+
+  .local-maps iframe{
+    width: 100%;
+    min-width: unset;
+    height: 350px;
+  }
+
+  .info-footer{
+  flex-direction: column;
+  gap: 60px;
+  }
+
+  .info-adv{
+    align-items: center;
+    text-align: center;
+  }
+
+  .info-adv h1{
+    font-size: 2.2em;
+  }
+
+  .info-adv p{
+    font-size: 1.1em;
+  }
+
+  .footer img{
+    width: 180px;
+  }
+
+  .aside-footer{
+    width: 100%;
+  }
+
+  .social{
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    
+  }
+
+  .btn-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+  }
+
+  .btn-socials .bi {
+    transform: scale(80%);
+
+  }
+
+  .nav-list-end{
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  .list-end{
+    margin-left: 0;
+    height: auto;
+    align-items: center;
+  }
+
+  .list-end li{
+    width: 100%;
+  }
+
+  .chat-wrapper{
+  right: 15px;
+  bottom: 15px;
+  }
+
+  .interface-chat{
+    width: calc(100vw - 30px);
+    height: 500px;
+    right: 0;
+    bottom: 90px;
+  }
+
+  .btn-chat{
+    width: 65px;
+    height: 65px;
+  }
+
 }
 

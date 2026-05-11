@@ -5,8 +5,12 @@ const elements = {
     interfaceChat: document.querySelector(".interface-chat"),
     closeChat: document.querySelector(".close"),
     textWhatsapp: document.querySelector(".text-whatsapp"),
-    btnTextWhatsapp: document.querySelector("#btnTextWhatsapp")
+    btnTextWhatsapp: document.querySelector("#btnTextWhatsapp"),
+    menuButton: document.querySelector(".menu-mobile"),
+    headerNav: document.querySelector(".header-nav"),
+    menuIcon: document.querySelector(".menu-icon")
 }
+
 
 const links = {
     linkedin: "https://www.linkedin.com/in/dr-izaias-barros-junior/",
@@ -60,11 +64,29 @@ function showSections () {
     })
 }
 
+function menuPhone () {
+    elements.menuButton.addEventListener("click", () => {
+
+    elements.headerNav.classList.toggle("active");
+
+    if(elements.headerNav.classList.contains("active")){
+        elements.menuIcon.classList.remove("bi-list");
+        elements.menuIcon.classList.add("bi-x-lg");
+    } else {
+        elements.menuIcon.classList.remove("bi-x-lg");
+        elements.menuIcon.classList.add("bi-list");
+    }
+
+
+});
+}
+
 function init () {
     redirectSite()
     sendMessageWhatsapp()
     showSections()
     showChat()
+    menuPhone()
 }
 
 init()
