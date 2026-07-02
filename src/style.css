@@ -687,11 +687,21 @@ html {
   letter-spacing: 0.5px;
 }
 
+.maps-div{
+  display: flex;
+}
+
+.maps-div p {
+  color: white;
+  font-size: 1.4em;
+  margin-bottom: 5px;
+}
 
 .local-maps iframe {
-  width: 28vw;
+  width: 20vw;
   min-width: 320px;
-  height: 60vh;
+  margin-right: 20px;
+  height: 50vh;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
